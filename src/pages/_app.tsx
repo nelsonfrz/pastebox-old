@@ -25,7 +25,7 @@ const MyApp: AppType<{ session: Session | null }> = ({
             <Header height={{ base: 50, md: 70 }} p="md">
               <div style={{ display: 'flex', alignItems: 'center', height: '100%' }}>
                 <Link href='/' style={{textDecoration: 'none'}}>
-                  <Title order={3}>Pastebox</Title>
+                  <Title color='#fff' order={3}>Pastebox</Title>
                 </Link>
               </div>
             </Header>
