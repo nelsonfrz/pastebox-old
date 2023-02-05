@@ -39,7 +39,7 @@ const EditPastePage: NextPage = () => {
       :
         getQuery.data?.paste ?
           <>
-            <Mantine.Title order={2}>Create Paste</Mantine.Title>
+            <Mantine.Title order={2}>Edit Paste</Mantine.Title>
             <Mantine.TextInput 
               ref={titleRef}
               label='Title'
