@@ -22,7 +22,7 @@ const UserPage: NextPage = () => {
   return (<Mantine.Center>
     <Mantine.Stack w={500}>
       {(!router.isReady || getUserDataQuery.isLoading) ?
-          <Mantine.Title>Loading...</Mantine.Title>
+          <Mantine.Loader style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)'}} />
         :
           getUserDataQuery.data ?
           <>

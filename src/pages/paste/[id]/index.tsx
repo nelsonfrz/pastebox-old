@@ -30,7 +30,7 @@ const PastePage: NextPage = () => {
   <Mantine.Center>
     <Mantine.Stack w={500}>
       {(!router.isReady || getPasteQuery.isLoading) ?
-        <Mantine.Title>Loading...</Mantine.Title>
+        <Mantine.Loader style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)'}} />
       :
         getPasteQuery.data?.paste ?
           <>

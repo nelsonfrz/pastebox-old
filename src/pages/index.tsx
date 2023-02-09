@@ -94,7 +94,7 @@ const Home: NextPage = () => {
             </Mantine.Flex>
           </>
           :
-          <Mantine.Title>Loading...</Mantine.Title>
+          <Mantine.Loader style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)'}} />
           }
           
         </Mantine.Stack>
