@@ -28,6 +28,9 @@ export const userRouter = createTRPCRouter({
     }))
     .query(async ({ ctx, input }) => {
       const pastes = await ctx.prisma.paste.findMany({
+        orderBy: {
+          date: 'desc'
+        },
         where: {
           userId: input.id,
         }

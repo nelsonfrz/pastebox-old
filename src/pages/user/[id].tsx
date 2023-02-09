@@ -33,11 +33,12 @@ const UserPage: NextPage = () => {
             <Mantine.Title order={2}>Pastes</Mantine.Title>
             <Mantine.Stack>
               {getUserPastesQuery.data?.pastes.map(paste => 
-                <Link key={paste.id} href={`/paste/${paste.id}`}>
-                  <Mantine.Card>
-                    <Mantine.Title style={{overflow: 'hidden', width: '100%', wordBreak: 'break-all'}} order={4}>{paste.title}</Mantine.Title>
-                  </Mantine.Card>
-                </Link>
+                <Mantine.Card key={paste.id}>
+                  <Link href={`/paste/${paste.id}`}>
+                    <Mantine.Title style={{color: '#C1C2C5', overflow: 'hidden', width: '100%', wordBreak: 'break-all'}} order={4}>{paste.title}</Mantine.Title>
+                  </Link>
+                  <Mantine.Text>{paste.date.toLocaleString()}</Mantine.Text>
+                </Mantine.Card>
               )}
             </Mantine.Stack>
           </>
