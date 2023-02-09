@@ -16,18 +16,6 @@ export const pasteRouter = createTRPCRouter({
       };
     }),
 
-  getAll: protectedProcedure
-    .query(async ({ ctx }) => {
-      const pastes = await ctx.prisma.paste.findMany({
-        where: {
-          userId: ctx.session.user.id
-        }
-      });
-      return {
-        pastes,
-      };
-    }),
-
   create: protectedProcedure
     .input(z.object({ 
       title: z.string().trim().min(1).max(100),

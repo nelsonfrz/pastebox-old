@@ -85,10 +85,10 @@ const Home: NextPage = () => {
               }}
             >Create Paste</Mantine.Button>
 
-            <Link href='/paste'>
+            <Link href={`/user/${sessionData?.user.id ?? ''}`}>
               <Mantine.Button>See Your Pastes</Mantine.Button>
             </Link>  
-
+              
             <SignOutButton />
           </Mantine.Flex>
         </Mantine.Stack>

@@ -65,7 +65,7 @@ const EditPastePage: NextPage = () => {
               error={contentError}
             />
             {sessionData?.user.id == getQuery.data.paste.userId &&
-            <Mantine.Group position='apart'>
+            <Mantine.Group>
               <Mantine.Button
                 onClick={() => {
                   if (title.trim().length < 1) {
@@ -88,6 +88,12 @@ const EditPastePage: NextPage = () => {
                   }
                 }}
               >Save</Mantine.Button>
+              <Mantine.Button
+                color='gray'
+                onClick={() => {
+                  void router.push(`/paste/${getQuery.data.paste?.id ?? ''}`);
+                }}
+              >Cancel</Mantine.Button>
               <Mantine.ActionIcon onClick={() => {
                 deleteMutation.mutate({
                   id: getQuery.data.paste?.id ?? ''
