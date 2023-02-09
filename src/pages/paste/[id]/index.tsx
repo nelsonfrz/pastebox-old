@@ -39,7 +39,7 @@ const PastePage: NextPage = () => {
               <Mantine.Group>
                 <Image style={{ borderRadius: '1000px' }} src={getUserDataQuery.data.image ?? ''} alt='User image' width={35} height={35} />
                 <Link href={`/user/${getPasteQuery.data.paste.userId}`}>
-                  <Mantine.Title style={{overflow: 'hidden', width: '100%', wordBreak: 'break-all'}} order={3}>{getUserDataQuery.data.name}</Mantine.Title>
+                  <Mantine.Title style={{color: '#C1C2C5', overflow: 'hidden', width: '100%', wordBreak: 'break-all'}} order={3}>{getUserDataQuery.data.name}</Mantine.Title>
                 </Link>
               </Mantine.Group>
               <Mantine.Text style={{overflow: 'hidden', width: '100%', wordBreak: 'break-all'}}>{getPasteQuery.data.paste.date.toLocaleString()}</Mantine.Text>

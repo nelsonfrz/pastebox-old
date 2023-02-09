@@ -28,7 +28,7 @@ const UserPage: NextPage = () => {
           <>
             <Mantine.Group>
               <Image style={{ borderRadius: '1000px' }} src={getUserDataQuery.data.image ?? ''} alt='User image' width={60} height={60} />
-              <Mantine.Title style={{overflow: 'hidden', width: '100%', wordBreak: 'break-all'}}>{getUserDataQuery.data.name}</Mantine.Title>
+              <Mantine.Title style={{overflow: 'hidden', wordBreak: 'break-all'}}>{getUserDataQuery.data.name}</Mantine.Title>
             </Mantine.Group>
             <Mantine.Title order={2}>Pastes</Mantine.Title>
             <Mantine.Stack>
