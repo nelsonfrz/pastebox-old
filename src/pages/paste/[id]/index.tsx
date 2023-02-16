@@ -46,7 +46,7 @@ const PastePage: NextPage = () => {
             </>}
 
             <Mantine.Title style={{overflow: 'hidden', width: '100%', wordBreak: 'break-all'}}>{getPasteQuery.data.paste.title}</Mantine.Title>
-            <Mantine.Text style={{overflow: 'hidden', width: '100%', wordBreak: 'break-all'}}>{getPasteQuery.data.paste.content}</Mantine.Text>
+            <Mantine.Text style={{whiteSpace: 'pre-wrap', overflow: 'hidden', width: '100%', wordBreak: 'break-all'}}>{getPasteQuery.data.paste.content}</Mantine.Text>
             <Mantine.Group>
               <Mantine.ActionIcon onClick={() => {
                 void navigator.share({ 
