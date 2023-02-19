@@ -1,4 +1,4 @@
-# Pastebox
+# Pastebox (DEPRECATED)
 A pastebin.com clone built on T3-Stack (NextJS, tRPC, Prisma, NextAuth, Mantine).
 
-https://pastebox.vercel.app/
+See https://github.com/nelsonfrz/pastebox
